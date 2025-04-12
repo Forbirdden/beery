@@ -24,12 +24,61 @@
                 </svg>
             </button>
         </div>
+
+        <div class="auth-section">
+            <button id="authButton" class="btn btn-outline-dark">Login with GitHub</button>
+        </div>
     </header>
 
     <div class="container main-content">
         <div id="apps" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
         <div id="noResults" class="text-center mt-5" style="display: none;">
             <h4 class="text-muted">No apps found</h4>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginReminderModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome to beerly!</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please login with GitHub to enjoy better experience</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" 
+                            class="btn btn-primary" 
+                            data-bs-dismiss="modal"
+                            onclick="document.getElementById('authButton').click()">
+                        Login Now
+                    </button>
+                    <button type="button" 
+                            class="btn btn-outline-secondary" 
+                            data-bs-dismiss="modal">
+                        Continue without login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="tokenModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">GitHub Token</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Create a <a href="https://github.com/settings/tokens/new?scopes=public_repo&expiration=30d" target="_blank">Personal Access Token</a> with "public_repo" scope and 30 days expiration.</p>
+                    <input type="text" id="tokenInput" class="form-control" placeholder="Paste token here">
+                    <div class="invalid-feedback mt-2">Please enter a valid token</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="saveToken">Save</button>
+                </div>
+            </div>
         </div>
     </div>
 

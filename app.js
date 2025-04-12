@@ -1,10 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     const APPS_PER_PAGE = 50;
     const CACHE_TIME = 5 * 60 * 1000;
+    const GITHUB_TOKEN_KEY = 'github_token';
     let cache = {};
     let allApps = [];
     let currentPage = 1;
     let currentSearch = '';
+
+    function getAuthHeader() {
+        const token = localStorage.getItem(GITHUB_TOKEN_KEY);
+        return token ? { 'Authorization': `token ${token}` } : {};
+    }
+
+    function updateAuthUI() {
+        const authButton = document.getElementById('authButton');
+        const hasToken = localStorage.getItem(GITHUB_TOKEN_KEY);
+        authButton.textContent = hasToken ? 'Logout' : 'Login with GitHub';
+        authButton.className = hasToken ? 'btn btn-outline-danger' : 'btn btn-outline-dark';
+    }
 
     async function cachedFetch(url) {
         const now = Date.now();
@@ -14,10 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const res = await fetch(url, {
-                headers: { 'User-Agent': 'GitHub-App-Store' }
+                headers: { 
+                    'User-Agent': 'GitHub-App-Store',
+                    ...getAuthHeader()
+                }
             });
 
             if (!res.ok) {
+                if (res.status === 401) handleAuthError();
                 if (res.status === 403) showError('GitHub API rate limit exceeded');
                 return null;
             }
@@ -29,6 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Fetch error:', error);
             return null;
         }
+    }
+
+    function handleAuthError() {
+        localStorage.removeItem(GITHUB_TOKEN_KEY);
+        updateAuthUI();
+        showError('Invalid token. Please re-authenticate.');
+        new bootstrap.Modal(document.getElementById('tokenModal')).show();
     }
 
     async function loadAppData(repoEntry) {
@@ -179,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!os) {
                     const lowerName = asset.name.toLowerCase();
-                    if (lowerName.includes('linux' ) || lowerName.includes('lin')) os = 'LINUX';
+                    if (lowerName.includes('linux') || lowerName.includes('lin')) os = 'LINUX';
                     else if (lowerName.includes('win') || lowerName.includes('windows')) os = 'WINDOWS';
                     else if (lowerName.includes('mac') || lowerName.includes('osx') || lowerName.includes('darwin')) os = 'MACOS';
                     else if (['exe', 'msi', 'msix', 'appinstaller'].includes(ext)) os = 'WINDOWS';
@@ -232,6 +256,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            document.getElementById('authButton').addEventListener('click', () => {
+                if(localStorage.getItem(GITHUB_TOKEN_KEY)) {
+                    localStorage.removeItem(GITHUB_TOKEN_KEY);
+                    updateAuthUI();
+                    showError('Logged out successfully');
+                    location.reload(); 
+                } else {
+                    new bootstrap.Modal(document.getElementById('tokenModal')).show();
+                }
+            });
+
+            document.getElementById('saveToken').addEventListener('click', () => {
+                const token = document.getElementById('tokenInput').value.trim();
+                if(/^ghp_[a-zA-Z0-9]{36}$/.test(token)) {
+                    localStorage.setItem(GITHUB_TOKEN_KEY, token);
+                    document.getElementById('tokenInput').classList.remove('is-invalid');
+                    new bootstrap.Modal(document.getElementById('tokenModal')).hide();
+                    updateAuthUI();
+                    location.reload(); 
+                } else {
+                    document.getElementById('tokenInput').classList.add('is-invalid');
+                }
+            });
+            
+            if (!localStorage.getItem(GITHUB_TOKEN_KEY)) {
+                const reminderModal = new bootstrap.Modal(document.getElementById('loginReminderModal'));
+                reminderModal.show();
+            }
+    
+            updateAuthUI();
             renderApps();
         } catch (error) {
             showError('Failed to load application data');

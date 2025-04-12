@@ -206,3 +206,43 @@
         font-size: 2rem;
     }
 }
+
+.auth-section {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.site-header {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.search-group {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#tokenModal .modal-body a {
+    word-break: break-all;
+}
+
+#loginReminderModal .modal-content {
+    border: 2px solid #0969da;
+}
+
+#loginReminderModal ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+#loginReminderModal ul li::before {
+    content: "✓";
+    color: #0969da;
+    margin-right: 0.5rem;
+}
+
+#loginReminderModal .modal-footer {
+    justify-content: space-between;
+}

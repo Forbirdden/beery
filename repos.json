@@ -140,13 +140,19 @@
         {
             "owner": "obsproject",
             "repo": "obs-studio",
-            "display_name": "OBS ",
+            "display_name": "OBS",
             "icon": "https://avatars.githubusercontent.com/u/7725691?s=200&v=4",
             "os_overrides": {
                  "Windows.zip": "WINDOWS P",
                  "Apple.dmg": "MACOS ARM64",
                  "Intel.dmg": "MACOS"
             }
+        },
+        {
+            "owner": "BetterDiscord",
+            "repo": "Installer",
+            "display_name": "BetterDiscord",
+            "icon": "https://avatars.githubusercontent.com/u/72631062?s=200&v=4"
         }
     ]
 } 

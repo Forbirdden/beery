@@ -8,7 +8,7 @@
         {
             "owner": "ValdikSS",
             "repo": "GoodbyeDPI",
-            "icon": "https://ntc.party/uploads/default/original/1X/3bdcdffa0d2f06e15ee4c02f4dd2ada9e771e642.png",
+            "icon": "https://raw.githubusercontent.com/ValdikSS/GoodbyeDPI/refs/heads/master/src/icon.ico",
             "os_overrides": {
                 "goodbyedpi": "WINDOWS"
             }

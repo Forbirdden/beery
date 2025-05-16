@@ -188,6 +188,28 @@
                  "setup.exe": "WINDOWS",
                  ".zip": "WINDOWS P"
             }
+        },
+                {
+            "owner": "ventoy",
+            "repo": "Ventoy",
+            "icon": "https://images.opencollective.com/ventoy/dd17838/logo/256.png"
+        },
+        {
+            "owner": "balena-io",
+            "repo": "etcher",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Etcher-icon.png",
+            "os_overrides": {
+                "x86_64.rpm": "LINUX",
+                "amd64.deb": "LINUX",
+                "arm64.dmg": "MACOS ARM64",
+                "x64.AppImage": "LINUX", 
+                "x64.dmg": "MACOS",
+                "Setup.exe": "WINDOWS",
+                "darwin-arm64": "MACOS ARM64 P",
+                "darwin-x64": "MACOS P",
+                "linux-x64": "LINUX P", 
+                "win32-x64": "WINDOWS P"
+            }
         }
     ]
 } 

@@ -2,10 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const APPS_PER_PAGE = 50;
     const CACHE_TIME = 5 * 60 * 1000;
     const GITHUB_TOKEN_KEY = 'github_token';
+    const THEME_KEY = 'preferred_theme';
     let cache = {};
     let allApps = [];
     let currentPage = 1;
     let currentSearch = '';
+
+    // Theme functions
+    function toggleTheme() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem(THEME_KEY, document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    function applySavedTheme() {
+        const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
+        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    }
 
     function getAuthHeader() {
         const token = localStorage.getItem(GITHUB_TOKEN_KEY);
@@ -113,10 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </div>
                         <p class="card-text flex-grow-1">${app.description}</p>
-                        <button class="btn btn-primary download-btn mt-auto align-self-start"
-                            data-repo="${app.author}/${app.originalRepo}">
-                            Download
-                        </button>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <button class="btn btn-primary download-btn"
+                                data-repo="${app.author}/${app.originalRepo}">
+                                Download
+                            </button>
+                            <a href="https://github.com/${app.author}/${app.originalRepo}" 
+                               target="_blank" 
+                               class="source-link">
+                                Source
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,11 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .join('');
 
         const loadMoreBtn = document.getElementById('loadMore');
-        loadMoreBtn.style.display = endIndex >= filteredApps.length ? 'none' : 'block';
-        loadMoreBtn.onclick = () => {
-            currentPage++;
-            renderApps();
-        };
+        if (loadMoreBtn) {
+            loadMoreBtn.style.display = endIndex >= filteredApps.length ? 'none' : 'block';
+            loadMoreBtn.onclick = () => {
+                currentPage++;
+                renderApps();
+            };
+        }
 
         document.getElementById('status').textContent = 
             `Showing ${Math.min(endIndex, filteredApps.length)} of ${filteredApps.length} apps`;
@@ -239,6 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function init() {
         try {
+            applySavedTheme();
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
             const repos = await fetch('repos.json').then(res => res.json());
             const loadedApps = (await Promise.all(repos.repos.map(loadAppData))).filter(app => app);
             allApps = sortApps(loadedApps);
@@ -313,6 +337,16 @@ document.addEventListener('DOMContentLoaded', () => {
             width: 64px;
             height: 64px;
             object-fit: contain;
+        }
+        .source-link {
+            color: var(--text-color) !important;
+            text-decoration: none !important;
+            font-weight: 600;
+            padding: 8px 0;
+            transition: opacity 0.2s;
+        }
+        .source-link:hover {
+            opacity: 0.8;
         }
     `;
     document.head.appendChild(style);

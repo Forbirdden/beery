@@ -163,7 +163,7 @@
         {
             "owner": "pbatard",
             "repo": "rufus",
-            "icon": "https://rufus.ie/pics/rufus-128.png"
+            "icon": "https://rufus.ie/pics/rufus-128.png",
             "os_overrides": {
                  "p.exe": "WINDOWS P",
                  "arm64.exe": "WINDOWS ARM64",
@@ -174,7 +174,7 @@
         {
             "owner": "microsoft",
             "repo": "PowerToys",
-            "icon": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBRY0umJKt.GQbXbqRe3O0.MdkGhUjrf0LivlGArxH_YXxpXB3ufyTADUrAs2D0gzEkqwBghD5FOqg3z9I42YZIg-"
+            "icon": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBRY0umJKt.GQbXbqRe3O0.MdkGhUjrf0LivlGArxH_YXxpXB3ufyTADUrAs2D0gzEkqwBghD5FOqg3z9I42YZIg-",
             "os_overrides": {
                  "x64.exe": "WINDOWS ",
                  "arm64.exe": "WINDOWS ARM64"
@@ -183,7 +183,7 @@
         {
             "owner": "AutoHotkey",
             "repo": "AutoHotkey",
-            "icon": "https://avatars.githubusercontent.com/u/1413373?s=200&v=4"
+            "icon": "https://avatars.githubusercontent.com/u/1413373?s=200&v=4",
             "os_overrides": {
                  "setup.exe": "WINDOWS"
             }

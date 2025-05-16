@@ -153,6 +153,12 @@
             "repo": "Installer",
             "display_name": "BetterDiscord",
             "icon": "https://avatars.githubusercontent.com/u/72631062?s=200&v=4"
+        },
+        {
+            "owner": "Forbirdden",
+            "repo": "Yescord-Desktop",
+            "display_name": "Yescord",
+            "icon": "https://raw.githubusercontent.com/Forbirdden/Yescord-Desktop/refs/heads/main/icon.png"
         }
     ]
 } 

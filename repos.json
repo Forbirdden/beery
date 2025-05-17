@@ -210,6 +210,22 @@
                 "linux-x64": "LINUX P", 
                 "win32-x64": "WINDOWS P"
             }
+        },
+        {
+            "owner": "vladimiry",
+            "repo": "ElectronMail",
+            "icon": "https://raw.githubusercontent.com/vladimiry/ElectronMail/refs/heads/master/src/assets/icon/icon.png",
+            "os_overrides": {
+                "linux-amd64.deb": "LINUX",
+                "linux-amd64.snap": "LINUX",
+                "linux-x64.freebsd": "LINUX",
+                "linux-x64.pacman": "LINUX", 
+                "linux-x86_64.AppImage": "LINUX",
+                "linux-x86_64.rpm": "LINUX",
+                "mac-arm64.dmg": "MACOS ARM64",
+                "mac-x64.dmg": "MACOS",
+                "windows-x64-nsis-installer.exe": "WINDOWS"
+            }
         }
     ]
 } 

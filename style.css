@@ -7,6 +7,46 @@
     --border-color: #e2e8f0;
 }
 
+:root.dark {
+    --primary-color: #3b82f6;
+    --hover-color: #2563eb;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --text-color: #f8fafc;
+    --muted-color: #94a3b8;
+    --border-color: #334155;
+    background: #0f172a;
+    color: var(--text-color);
+}
+
+:root.dark .app-card {
+    background: #1e293b;
+}
+
+:root.dark .modal-content {
+    background: #1e293b;
+}
+
+:root.dark .list-group-item {
+    background: #1e293b;
+    color: var(--text-color);
+}
+
+:root.dark .list-group-item:hover {
+    background: #334155;
+}
+
+.source-link {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: opacity 0.2s;
+}
+
+.source-link:hover {
+    opacity: 0.8;
+}
+
 .site-header {
     position: fixed;
     top: 0;

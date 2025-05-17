@@ -18,21 +18,35 @@
     color: var(--text-color);
 }
 
+:root.dark body {
+    background: #0f172a !important;
+}
+
 :root.dark .app-card {
-    background: #1e293b;
+    background: #1e293b !important;
+    border-color: var(--border-color) !important;
 }
 
 :root.dark .modal-content {
-    background: #1e293b;
+    background: #1e293b !important;
+    color: var(--text-color) !important;
 }
 
 :root.dark .list-group-item {
-    background: #1e293b;
-    color: var(--text-color);
+    background: #1e293b !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
 }
 
-:root.dark .list-group-item:hover {
-    background: #334155;
+:root.dark .search-input {
+    background: #1e293b !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+:root.dark .modal-header,
+:root.dark .modal-footer {
+    border-color: var(--border-color) !important;
 }
 
 .source-link {

@@ -226,6 +226,31 @@
                 "mac-x64.dmg": "MACOS",
                 "windows-x64-nsis-installer.exe": "WINDOWS"
             }
+        },
+        {
+            "owner": "hydralauncher",
+            "repo": "hydra",
+            "icon": "https://raw.githubusercontent.com/hydralauncher/hydra/main/resources/icon.png",
+            "os_overrides": {
+                "amd64.deb": "LINUX",
+                "amd64.snap": "LINUX",
+                ".pacman": "LINUX", 
+                ".AppImage": "LINUX",
+                "x86_64.rpm": "LINUX",
+                "portable.exe": "WINDOWS P",
+                "setup.exe": "WINDOWS"
+            }
+        },
+        {
+            "owner": "ppy",
+            "repo": "osu",
+            "icon": "https://raw.githubusercontent.com/ppy/osu/refs/heads/master/assets/lazer.png",
+            "os_overrides": {
+                "install.exe": "WINDOWS",
+                "osu.app.Apple.Silicon.zip": "MACOS ARM64",
+                "osu.app.Intel.zip": "MACOS", 
+                "osu.AppImage": "LINUX"
+            }
         }
     ]
 } 

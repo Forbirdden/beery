@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="512" height="200" src="https://github.com/user-attachments/assets/5d997da9-a950-47c8-b5ee-45526ff7093c">
+  <img width="512" height="200" src="https://raw.githubusercontent.com/Forbirdden/beery/refs/heads/main/logoxtitle.png">
 </p>
 
 # What is beery?

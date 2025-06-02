@@ -3,7 +3,13 @@
         {
             "owner": "aiko-chan-ai",
             "repo": "DiscordBotClient",
-            "icon": "https://raw.githubusercontent.com/aiko-chan-ai/DiscordBotClient/refs/heads/electron-v3/AppAssets/DiscordBotClient.png"
+            "icon": "https://raw.githubusercontent.com/aiko-chan-ai/DiscordBotClient/refs/heads/electron-v3/AppAssets/DiscordBotClient.png",
+            "os_overrides": {
+                "linux": "LINUX",
+                "arm64.dmg": "MACOS ARM64",
+                "x64.dmg": "MACOS",
+                "win": "WINDOWS"
+            }
         },
         {
             "owner": "ValdikSS",

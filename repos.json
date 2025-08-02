@@ -258,5 +258,12 @@
                 "osu.AppImage": "LINUX"
             }
         }
+    ],
+        {
+            "owner": "Alessandros-Hube",
+            "repo": "PsiphonLinuxGUI",
+            "icon": "https://github.com/Alessandros-Hube/PsiphonLinuxGUI/blob/main/images/psiphonlinuxgui.png",
+        }
     ]
 } 
+

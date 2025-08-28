@@ -295,9 +295,32 @@
             "owner": "MeexReay",
             "repo": "poshlostios-webkitgtk6",
             "icon": "https://i.postimg.cc/850r2cXb/image.png"
-        }
+        },
+{
+    "owner": "PrismLauncher",
+    "repo": "PrismLauncher",
+    "display_name": "Prism Launcher",
+    "icon": "https://avatars.githubusercontent.com/u/116031705",
+    "os_overrides": {
+        "Linux-Qt5-Portable": "LINUX QT5 P",
+        "Linux-Qt6-Portable": "LINUX QT6 P",
+        "Linux-x86_64.AppImage": "LINUX",
+        "macOS-": "MACOS",
+        "macOS-Legacy": "MACOS LEGACY",
+        "Windows-MinGW-w64-": "WINDOWS",
+        "Windows-MinGW-w64-Portable": "WINDOWS P",
+        "Windows-MinGW-w64-Setup": "WINDOWS",
+        "Windows-MSVC-": "WINDOWS MSVC",
+        "Windows-MSVC-arm64-": "WINDOWS ARM64 MSVC",
+        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 MSVC P",
+        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64 MSVC",
+        "Windows-MSVC-Portable": "WINDOWS MSVC P",
+        "Windows-MSVC-Setup": "WINDOWS MSVC"
+    }
+}
     ]
 } 
+
 
 
 

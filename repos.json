@@ -98,11 +98,11 @@
             "repo": "neovim",
             "icon": "https://avatars.githubusercontent.com/u/6471485?s=200&v=4",
             "os_overrides": {
-                 "linux-arm64": "LINUX ARM64",
-                 "linux-x86_64": "LINUX",
-                 "macos-arm64": "MACOS ARM64",
-                 "macos-x86_64": "MACOS",
-                 "win-64": "WINDOWS"
+                "linux-arm64": "LINUX ARM64",
+                "linux-x86_64": "LINUX",
+                "macos-arm64": "MACOS ARM64",
+                "macos-x86_64": "MACOS",
+                "win-64": "WINDOWS"
             }
         },
         {
@@ -110,11 +110,11 @@
             "repo": "nheko",
             "icon": "https://avatars.githubusercontent.com/u/46657606?s=200&v=4",
             "os_overrides": {
-                 "arm64.flatpak": "LINUX ARM64",
-                 "amd64.flatpak": "LINUX",
-                 "apple-silicon.dmg": "MACOS ARM64",
-                 "intel.dmg": "MACOS",
-                 "win-64": "WINDOWS"
+                "arm64.flatpak": "LINUX ARM64",
+                "amd64.flatpak": "LINUX",
+                "apple-silicon.dmg": "MACOS ARM64",
+                "intel.dmg": "MACOS",
+                "win-64": "WINDOWS"
             }
         },
         {
@@ -123,14 +123,14 @@
             "display_name": "Telegram",
             "icon": "https://raw.githubusercontent.com/telegramdesktop/tdesktop/refs/heads/dev/Telegram/Resources/art/icon512.png",
             "os_overrides": {
-                 "tportable-arm64": "WINDOWS ARM64 P",
-                 "tportable-x64": "WINDOWS P",
-                 "tportable": "WINDOWS x32 P",
-                 "tsetup-arm64": "WINDOWS ARM64",
-                 "tsetup-x64": "WINDOWS",
-                 ".dmg": "MACOS",
-                 ".xz": "LINUX",
-                 "tsetup": "WINDOWS x32"
+                "tportable-arm64": "WINDOWS ARM64 P",
+                "tportable-x64": "WINDOWS P",
+                "tportable": "WINDOWS x32 P",
+                "tsetup-arm64": "WINDOWS ARM64",
+                "tsetup-x64": "WINDOWS",
+                ".dmg": "MACOS",
+                ".xz": "LINUX",
+                "tsetup": "WINDOWS x32"
             }
         },
         {
@@ -150,9 +150,9 @@
             "display_name": "OBS",
             "icon": "https://avatars.githubusercontent.com/u/7725691?s=200&v=4",
             "os_overrides": {
-                 "Windows.zip": "WINDOWS P",
-                 "Apple.dmg": "MACOS ARM64",
-                 "Intel.dmg": "MACOS"
+                "Windows.zip": "WINDOWS P",
+                "Apple.dmg": "MACOS ARM64",
+                "Intel.dmg": "MACOS"
             }
         },
         {
@@ -172,10 +172,10 @@
             "repo": "rufus",
             "icon": "https://rufus.ie/pics/rufus-128.png",
             "os_overrides": {
-                 "p.exe": "WINDOWS P",
-                 "arm64.exe": "WINDOWS ARM64",
-                 ".exe": "WINDOWS",
-                 "x86.exe": "WINDOWS x32"
+                "p.exe": "WINDOWS P",
+                "arm64.exe": "WINDOWS ARM64",
+                ".exe": "WINDOWS",
+                "x86.exe": "WINDOWS x32"
             }
         },
         {
@@ -183,8 +183,8 @@
             "repo": "PowerToys",
             "icon": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBRY0umJKt.GQbXbqRe3O0.MdkGhUjrf0LivlGArxH_YXxpXB3ufyTADUrAs2D0gzEkqwBghD5FOqg3z9I42YZIg-",
             "os_overrides": {
-                 "x64.exe": "WINDOWS ",
-                 "arm64.exe": "WINDOWS ARM64"
+                "x64.exe": "WINDOWS ",
+                "arm64.exe": "WINDOWS ARM64"
             }
         },
         {
@@ -192,11 +192,11 @@
             "repo": "AutoHotkey",
             "icon": "https://avatars.githubusercontent.com/u/1413373?s=200&v=4",
             "os_overrides": {
-                 "setup.exe": "WINDOWS",
-                 ".zip": "WINDOWS P"
+                "setup.exe": "WINDOWS",
+                ".zip": "WINDOWS P"
             }
         },
-                {
+        {
             "owner": "ventoy",
             "repo": "Ventoy",
             "icon": "https://images.opencollective.com/ventoy/dd17838/logo/256.png"
@@ -209,12 +209,12 @@
                 "x86_64.rpm": "LINUX",
                 "amd64.deb": "LINUX",
                 "arm64.dmg": "MACOS ARM64",
-                "x64.AppImage": "LINUX", 
+                "x64.AppImage": "LINUX",
                 "x64.dmg": "MACOS",
                 "Setup.exe": "WINDOWS",
                 "darwin-arm64": "MACOS ARM64 P",
                 "darwin-x64": "MACOS P",
-                "linux-x64": "LINUX P", 
+                "linux-x64": "LINUX P",
                 "win32-x64": "WINDOWS P"
             }
         },
@@ -226,7 +226,7 @@
                 "linux-amd64.deb": "LINUX",
                 "linux-amd64.snap": "LINUX",
                 "linux-x64.freebsd": "LINUX",
-                "linux-x64.pacman": "LINUX", 
+                "linux-x64.pacman": "LINUX",
                 "linux-x86_64.AppImage": "LINUX",
                 "linux-x86_64.rpm": "LINUX",
                 "mac-arm64.dmg": "MACOS ARM64",
@@ -241,7 +241,7 @@
             "os_overrides": {
                 "amd64.deb": "LINUX",
                 "amd64.snap": "LINUX",
-                ".pacman": "LINUX", 
+                ".pacman": "LINUX",
                 ".AppImage": "LINUX",
                 "x86_64.rpm": "LINUX",
                 "portable.exe": "WINDOWS P",
@@ -255,17 +255,14 @@
             "os_overrides": {
                 "install.exe": "WINDOWS",
                 "osu.app.Apple.Silicon.zip": "MACOS ARM64",
-                "osu.app.Intel.zip": "MACOS", 
+                "osu.app.Intel.zip": "MACOS",
                 "osu.AppImage": "LINUX"
             }
         },
         {
             "owner": "Alessandros-Hube",
             "repo": "PsiphonLinuxGUI",
-            "icon": "https://github.com/Alessandros-Hube/PsiphonLinuxGUI/blob/main/images/psiphonlinuxgui.png",
+            "icon": "https://github.com/Alessandros-Hube/PsiphonLinuxGUI/blob/main/images/psiphonlinuxgui.png"
         }
     ]
-} 
-
-
-
+}

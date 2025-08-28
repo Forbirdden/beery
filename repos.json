@@ -289,7 +289,8 @@
                 "x86_64-unknown-linux-musl.zip": "MUSL LINUX",
                 "windows": "WINDOWS"
             }
-        },
+        }
     ]
 } 
+
 

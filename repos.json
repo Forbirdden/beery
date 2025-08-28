@@ -310,9 +310,9 @@
         "Windows-MinGW-w64-Portable": "WINDOWS P",
         "Windows-MinGW-w64-Setup": "WINDOWS",
         "Windows-MSVC-": "WINDOWS MSVC",
-        "Windows-MSVC-arm64-": "WINDOWS ARM64 MSVC",
-        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 MSVC P",
-        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64 MSVC",
+        "Windows-MSVC-arm64-": "WINDOWS ARM64",
+        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 P",
+        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64",
         "Windows-MSVC-Portable": "WINDOWS MSVC P",
         "Windows-MSVC-Setup": "WINDOWS MSVC"
       }
@@ -334,9 +334,9 @@
         "Windows-MinGW-w64-Portable": "WINDOWS P",
         "Windows-MinGW-w64-Setup": "WINDOWS",
         "Windows-MSVC-": "WINDOWS MSVC",
-        "Windows-MSVC-arm64-": "WINDOWS ARM64 MSVC",
-        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 MSVC P",
-        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64 MSVC",
+        "Windows-MSVC-arm64-": "WINDOWS ARM64",
+        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 P",
+        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64",
         "Windows-MSVC-Portable": "WINDOWS MSVC P",
         "Windows-MSVC-Setup": "WINDOWS MSVC"
       }
@@ -346,9 +346,9 @@
       "repo": "ElyPrismLauncher",
       "icon": "https://raw.githubusercontent.com/ElyPrismLauncher/ElyPrismLauncher/refs/heads/develop/program_info/prismlauncher.ico",
       "os_overrides": {
-        "ArchLinux-x86_64": "ARCH LINUX",
-        "Linux-9.5-Flatpak-aarch64": "LINUX ARM64 FLATPAK",
-        "Linux-9.5-Flatpak-x86_64": "LINUX FLATPAK",
+        "ArchLinux-x86_64": "LINUX",
+        "Linux-9.5-Flatpak-aarch64": "LINUX ARM64",
+        "Linux-9.5-Flatpak-x86_64": "LINUX",
         "Linux-Qt5-Portable": "LINUX QT5 P",
         "Linux-Qt6-Portable": "LINUX QT6 P",
         "Linux-x86_64.AppImage": "LINUX",
@@ -358,11 +358,30 @@
         "Windows-MinGW-w64-Portable": "WINDOWS P",
         "Windows-MinGW-w64-Setup": "WINDOWS",
         "Windows-MSVC-": "WINDOWS MSVC",
-        "Windows-MSVC-arm64-": "WINDOWS ARM64 MSVC",
-        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 MSVC P",
-        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64 MSVC",
+        "Windows-MSVC-arm64-": "WINDOWS ARM64",
+        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 P",
+        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64",
         "Windows-MSVC-Portable": "WINDOWS MSVC P",
         "Windows-MSVC-Setup": "WINDOWS MSVC"
+      }
+    },
+    {
+      "owner": "Diegiwg",
+      "repo": "PrismLauncher-Cracked",
+      "back_color": "ffffff",
+      "icon": "https://github.com/PrismLauncher/PrismLauncher/raw/develop/logo.svg",
+      "os_overrides": {
+        "Linux-Qt5-Portable": "LINUX QT5 P",
+        "Linux-Qt6-Portable": "LINUX QT6 P",
+        "Linux-x86_64.AppImage": "LINUX",
+        "macOS-": "MACOS ARM64",
+        "macOS-Legacy": "MACOS",
+        "Windows-MinGW-w64-": "WINDOWS",
+        "Windows-MinGW-w64-Portable": "WINDOWS P",
+        "Windows-MinGW-w64-Setup": "WINDOWS",
+        "Windows-MSVC-arm64-": "WINDOWS ARM64",
+        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 P",
+        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64",
       }
     }
   ]

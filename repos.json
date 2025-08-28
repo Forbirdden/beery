@@ -166,7 +166,18 @@
             "owner": "Forbirdden",
             "repo": "Yescord-Desktop",
             "display_name": "Yescord",
-            "icon": "https://raw.githubusercontent.com/Forbirdden/Yescord-Desktop/refs/heads/main/icon.png"
+            "icon": "https://raw.githubusercontent.com/Forbirdden/Yescord-Desktop/refs/heads/main/icon.png",
+    "os_overrides": {
+        "arm64.AppImage": "LINUX ARM64",
+        "arm64.dmg": "MACOS ARM64", 
+        "aarch64.rpm": "LINUX ARM64",
+        ".AppImage": "LINUX",
+        ".dmg": "MACOS",
+        "x86_64.rpm": "LINUX",
+        "Setup.exe": "WINDOWS",
+        "_amd64.deb": "LINUX",
+        "_arm64.deb": "LINUX ARM64"
+    }
         },
         {
             "owner": "pbatard",
@@ -498,6 +509,15 @@
                 "darwin-x64": "MACOS",
                 "full.nupkg": "WINDOWS"
             }
-        }
+        },
+{
+    "owner": "virt-manager",
+    "repo": "virt-manager",
+    "icon": "https://avatars.githubusercontent.com/u/12552438",
+    "os_overrides": {
+        ".tar.xz": "LINUX"
+    }
+}
     ]
 }
+

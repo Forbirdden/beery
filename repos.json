@@ -416,8 +416,9 @@
         ".dmg": "MACOS",
         ".exe": "WINDOWS",
         ".tar.gz": "LINUX",
-        "_amd64.deb": "LINUX DEB"
+        "_amd64.deb": "LINUX"
       }
     }
   ]
 }
+

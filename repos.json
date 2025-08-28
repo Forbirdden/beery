@@ -290,8 +290,14 @@
                 "x86_64-unknown-linux-musl.zip": "MUSL LINUX",
                 "windows": "WINDOWS"
             }
+        },
+        {
+            "owner": "MeexReay",
+            "repo": "poshlostios-webkitgtk6",
+            "icon": "https://i.postimg.cc/850r2cXb/image.png",
         }
     ]
 } 
+
 
 

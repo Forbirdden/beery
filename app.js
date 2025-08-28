@@ -8,15 +8,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPage = 1;
     let currentSearch = '';
 
-    // Theme functions
     function toggleTheme() {
         document.documentElement.classList.toggle('dark');
-        localStorage.setItem(THEME_KEY, document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+        updateLogo(isDark);
     }
 
     function applySavedTheme() {
         const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
-        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+        const isDark = savedTheme === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+        updateLogo(isDark);
+    }
+
+    function updateLogo(isDark) {
+        const logo = document.querySelector('.header-logo');
+        if (logo) {
+            logo.src = isDark ? 'logowtitle.png' : 'logoxtitle.png';
+            logo.alt = isDark ? 'beery Dark Logo' : 'beery Light Logo';
+        }
     }
 
     function getAuthHeader() {
@@ -67,33 +78,88 @@ document.addEventListener('DOMContentLoaded', () => {
         new bootstrap.Modal(document.getElementById('tokenModal')).show();
     }
 
-    async function loadAppData(repoEntry) {
-        if (!repoEntry.owner || !repoEntry.repo) {
-            console.error('Invalid repo entry:', repoEntry);
-            return null;
-        }
+async function loadAppData(repoEntry) {
+    if (!repoEntry.owner || !repoEntry.repo) {
+        console.error('Invalid repo entry:', repoEntry);
+        return null;
+    }
 
-        try {
-            const [releases, repoInfo] = await Promise.all([
-                cachedFetch(`https://api.github.com/repos/${repoEntry.owner}/${repoEntry.repo}/releases`),
-                cachedFetch(`https://api.github.com/repos/${repoEntry.owner}/${repoEntry.repo}`)
-            ]);
+    try {
+        const [releases, repoInfo] = await Promise.all([
+            cachedFetch(`https://api.github.com/repos/${repoEntry.owner}/${repoEntry.repo}/releases`),
+            cachedFetch(`https://api.github.com/repos/${repoEntry.owner}/${repoEntry.repo}`)
+        ]);
 
-            return {
-                title: repoEntry.display_name || repoEntry.repo,
-                originalRepo: repoEntry.repo,
-                author: repoEntry.owner,
-                description: repoInfo?.description || 'No description available',
-                stars: repoInfo?.stargazers_count || 0,
-                releases: releases || [],
-                icon: repoEntry.icon || 'logo1x1.png',
-                os_overrides: repoEntry.os_overrides || {}
-            };
-        } catch (error) {
-            console.error(`Error loading ${repoEntry.owner}/${repoEntry.repo}:`, error);
-            return null;
+        return {
+            title: repoEntry.display_name || repoEntry.repo,
+            originalRepo: repoEntry.repo,
+            author: repoEntry.owner,
+            description: repoInfo?.description || 'No description available',
+            stars: repoInfo?.stargazers_count || 0,
+            releases: releases || [],
+            icon: repoEntry.icon || 'logo1x1.png',
+            os_overrides: repoEntry.os_overrides || {},
+            back_color: repoEntry.back_color || null 
+        };
+    } catch (error) {
+        console.error(`Error loading ${repoEntry.owner}/${repoEntry.repo}:`, error);
+        return null;
+    }
+}
+
+function createAppCard(app) {
+    let iconBackgroundColor = 'var(--icon-bg-color)';
+    
+    if (app.back_color) {
+        const colorRegex = /^[0-9A-Fa-f]{3,6}$/;
+        if (colorRegex.test(app.back_color)) {
+            iconBackgroundColor = `#${app.back_color}`;
+        } else {
+            console.warn(`Invalid back_color for ${app.author}/${app.repo}: ${app.back_color}`);
         }
     }
+    
+    const iconStyle = `background-color: ${iconBackgroundColor};`;
+
+    return `
+        <div class="col mb-4" 
+             data-search="${app.title.toLowerCase()} 
+             ${app.originalRepo.toLowerCase()} 
+             ${app.author.toLowerCase()} 
+             ${app.description.toLowerCase()}">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-container" style="${iconStyle}">
+                            <img src="${app.icon}" 
+                                 class="app-icon rounded" 
+                                 alt="${app.title} icon"
+                                 onerror="this.src='logo1x1.png'">
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="card-title mb-0">${app.title}</h5>
+                            <div class="d-flex align-items-center gap-2 mt-1">
+                                <small class="text-muted">by ${app.author}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text flex-grow-1">${app.description}</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                        <button class="btn btn-primary download-btn"
+                            data-repo="${app.author}/${app.originalRepo}">
+                            Download
+                        </button>
+                        <a href="https://github.com/${app.author}/${app.originalRepo}" 
+                           target="_blank" 
+                           class="source-link">
+                            Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
 
     function sortApps(apps) {
         return apps.sort((a, b) => {
@@ -101,45 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (a.title !== b.title) return a.title.localeCompare(b.title);
             return a.author.localeCompare(b.author);
         });
-    }
-
-    function createAppCard(app) {
-        return `
-            <div class="col mb-4" 
-                 data-search="${app.title.toLowerCase()} 
-                 ${app.originalRepo.toLowerCase()} 
-                 ${app.author.toLowerCase()} 
-                 ${app.description.toLowerCase()}">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="${app.icon}" 
-                                 class="app-icon rounded me-3" 
-                                 alt="${app.title} icon"
-                                 onerror="this.src='logo1x1.png'">
-                            <div>
-                                <h5 class="card-title mb-0">${app.title}</h5>
-                                <div class="d-flex align-items-center gap-2 mt-1">
-                                    <small class="text-muted">by ${app.author}</small>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="card-text flex-grow-1">${app.description}</p>
-                        <div class="d-flex justify-content-between align-items-center mt-auto">
-                            <button class="btn btn-primary download-btn"
-                                data-repo="${app.author}/${app.originalRepo}">
-                                Download
-                            </button>
-                            <a href="https://github.com/${app.author}/${app.originalRepo}" 
-                               target="_blank" 
-                               class="source-link">
-                                Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
     }
 
     function renderApps() {

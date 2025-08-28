@@ -21,7 +21,8 @@
         },
         {
             "owner": "meexreay",
-            "repo": "bRAC"
+            "repo": "bRAC",
+            "icon": "https://raw.githubusercontent.com/MeexReay/bRAC/refs/heads/main/src/chat/images/icon.png"
         },
         {
             "owner": "Vencord",
@@ -266,4 +267,5 @@
         }
     ]
 } 
+
 

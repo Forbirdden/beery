@@ -262,7 +262,34 @@
         {
             "owner": "Alessandros-Hube",
             "repo": "PsiphonLinuxGUI",
-            "icon": "https://github.com/Alessandros-Hube/PsiphonLinuxGUI/blob/main/images/psiphonlinuxgui.png"
-        }
+            "icon": "https://raw.githubusercontent.com/Alessandros-Hube/PsiphonLinuxGUI/refs/heads/main/images/psiphonlinuxgui.png"
+        },
+        {
+            "owner": "lutris",
+            "repo": "lutris",
+            "icon": "https://avatars.githubusercontent.com/u/5067433"
+        },
+        {
+            "owner": "ramensoftware",
+            "repo": "windhawk",
+            "icon": "https://raw.githubusercontent.com/ramensoftware/windhawk/refs/heads/main/src/windhawk/app/rsrc/app.ico",
+            "os_overrides": {
+                "setup": "WINDOWS",
+                "setup_offline": "WINDOWS OFFLINE"
+            }
+        },
+        {
+            "owner": "kostya-zero",
+            "repo": "lime",
+            "icon": "https://em-content.zobj.net/source/google/428/lime_1f34b-200d-1f7e9.png",
+            "os_overrides": {
+                "aarch64-unknown-linux-gnu.zip": "GNU LINUX ARM64",
+                "aarch64-unknown-linux-musl.zip": "MUSL LINUX ARM64",
+                "x86_64-unknown-linux-gnu.zip": "GNU LINUX",
+                "x86_64-unknown-linux-musl.zip": "MUSL LINUX",
+                "windows": "WINDOWS"
+            }
+        },
     ]
-}
+} 
+

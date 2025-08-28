@@ -258,8 +258,7 @@
                 "osu.app.Intel.zip": "MACOS", 
                 "osu.AppImage": "LINUX"
             }
-        }
-    ],
+        },
         {
             "owner": "Alessandros-Hube",
             "repo": "PsiphonLinuxGUI",
@@ -267,5 +266,6 @@
         }
     ]
 } 
+
 
 

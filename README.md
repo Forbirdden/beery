@@ -9,6 +9,8 @@ beery gets programs directly from their github repositories, so I won't get sued
 
 If you want to add your (or not so) program to beery, feel free to [make a pull request](https://github.com/Forbirdden/beery/pulls) with an updated repos.json
 
+[How to edit repos.json](https://github.com/Forbirdden/beery/wiki/Adding-an-app)
+
 ## Dictionary
 
 **P** - portable *(ex. WINDOWS P - portable edition of program for Windows)*

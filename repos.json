@@ -526,6 +526,20 @@
         "x64": "WINDOWS",
         "x86": "WINDOWS x32"
       }
+    },
+    {
+      "owner": "nixxoq",
+      "repo": "Windows-Product-Key-Switcher"
+    },
+    {
+      "owner": "nixxoq",
+      "repo": "gtokenchecker-rs",
+      "os_overrides": {
+        "x86_64-pc": "WINDOWS",
+        "i686": "WINDOWS x32",
+        "linux": "LINUX"
+      }
     }
   ]
 }
+

@@ -539,7 +539,17 @@
         "i686": "WINDOWS x32",
         "linux": "LINUX"
       }
+    },
+    {
+      "owner": "Forbirdden",
+      "repo": "toroid",
+      "icon": "https://i.postimg.cc/4NHZz61c/image.png",
+      "os_overrides": {
+        "main": "LINUX"
+      }    
     }
   ]
-}
+} 
+
+
 

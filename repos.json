@@ -20,19 +20,9 @@
       }
     },
     {
-      "owner": "meexreay",
-      "repo": "bRAC",
-      "icon": "https://raw.githubusercontent.com/MeexReay/bRAC/refs/heads/main/src/chat/images/icon.png"
-    },
-    {
       "owner": "Vencord",
       "repo": "Vesktop",
       "icon": "https://raw.githubusercontent.com/Vencord/Vesktop/refs/heads/main/build/icon.png"
-    },
-    {
-      "owner": "OctoBanon-Main",
-      "display_name": "Mefedroniy",
-      "repo": "mefedroniy-client"
     },
     {
       "owner": "MultiMC",
@@ -303,11 +293,6 @@
       }
     },
     {
-      "owner": "MeexReay",
-      "repo": "poshlostios-webkitgtk6",
-      "icon": "https://i.postimg.cc/850r2cXb/image.png"
-    },
-    {
       "owner": "PrismLauncher",
       "repo": "PrismLauncher",
       "icon": "https://avatars.githubusercontent.com/u/116031705",
@@ -550,6 +535,7 @@
     }
   ]
 } 
+
 
 
 

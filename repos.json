@@ -532,7 +532,27 @@
       "os_overrides": {
         "main": "LINUX"
       }    
-    }
+    },
+    {
+      "owner": "locomiadev",
+      "repo": "envfetch"
+    },
+    {
+      "owner": "TDesktop-x64",
+      "repo": "tdesktop",
+      "display_name": "64Gram",
+      "icon": "https://raw.githubusercontent.com/telegramdesktop/tdesktop/refs/heads/dev/Telegram/Resources/art/icon512.png",
+      "os_overrides": {
+        "tportable-arm64": "WINDOWS ARM64 P",
+        "tportable-x64": "WINDOWS P",
+        "tportable": "WINDOWS x32 P",
+        "tsetup-arm64": "WINDOWS ARM64",
+        "tsetup-x64": "WINDOWS",
+        ".dmg": "MACOS",
+        ".xz": "LINUX",
+        "tsetup": "WINDOWS x32"
+      }
+    },
   ]
 } 
 

@@ -450,10 +450,10 @@
       }
     },
     {
-      "owner": "th-ch",
-      "repo": "youtube-music",
-      "display_name": "YouTube Music",
-      "icon": "https://raw.githubusercontent.com/th-ch/youtube-music/refs/heads/master/assets/generated/icons/png/128x128.png",
+      "owner": "pear-devs",
+      "repo": "pear-desktop",
+      "display_name": "Pear YT Music",
+      "icon": "https://em-content.zobj.net/source/google/439/pear_1f350.png",
       "os_overrides": {
         "arm64.AppImage": "LINUX ARM64",
         "arm64.dmg": "MACOS ARM64",
@@ -550,6 +550,7 @@
     }
   ]
 } 
+
 
 
 

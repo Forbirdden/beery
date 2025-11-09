@@ -541,20 +541,16 @@
       "owner": "TDesktop-x64",
       "repo": "tdesktop",
       "display_name": "64Gram",
-      "icon": "https://raw.githubusercontent.com/telegramdesktop/tdesktop/refs/heads/dev/Telegram/Resources/art/icon512.png",
+      "icon": "https://avatars.githubusercontent.com/u/62358867",
       "os_overrides": {
-        "tportable-arm64": "WINDOWS ARM64 P",
-        "tportable-x64": "WINDOWS P",
-        "tportable": "WINDOWS x32 P",
-        "tsetup-arm64": "WINDOWS ARM64",
-        "tsetup-x64": "WINDOWS",
+        ".exe": "WINDOWS",
         ".dmg": "MACOS",
-        ".xz": "LINUX",
-        "tsetup": "WINDOWS x32"
+        "linux.zip": "LINUX"
       }
     },
   ]
 } 
+
 
 
 

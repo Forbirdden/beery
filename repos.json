@@ -314,30 +314,6 @@
       }
     },
     {
-      "owner": "fn2006",
-      "repo": "PollyMC",
-      "icon": "https://raw.githubusercontent.com/fn2006/PollyMC/refs/heads/develop/program_info/pollymc.ico",
-      "os_overrides": {
-        "Linux-8.0-x86_64.flatpak": "LINUX",
-        "Linux-Qt5-": "LINUX QT5",
-        "Linux-Qt5-Portable": "LINUX QT5 P",
-        "Linux-Qt6-": "LINUX QT6",
-        "Linux-Qt6-Portable": "LINUX QT6 P",
-        "Linux-x86_64.AppImage": "LINUX",
-        "macOS-": "MACOS ARM64",
-        "macOS-Legacy": "MACOS",
-        "Windows-MinGW-w64-": "WINDOWS",
-        "Windows-MinGW-w64-Portable": "WINDOWS P",
-        "Windows-MinGW-w64-Setup": "WINDOWS",
-        "Windows-MSVC-": "WINDOWS MSVC",
-        "Windows-MSVC-arm64-": "WINDOWS ARM64",
-        "Windows-MSVC-arm64-Portable": "WINDOWS ARM64 P",
-        "Windows-MSVC-arm64-Setup": "WINDOWS ARM64",
-        "Windows-MSVC-Portable": "WINDOWS MSVC P",
-        "Windows-MSVC-Setup": "WINDOWS MSVC"
-      }
-    },
-    {
       "owner": "ElyPrismLauncher",
       "repo": "ElyPrismLauncher",
       "icon": "https://raw.githubusercontent.com/ElyPrismLauncher/ElyPrismLauncher/refs/heads/develop/program_info/prismlauncher.ico",
@@ -568,3 +544,4 @@
     }
   ]
 } 
+

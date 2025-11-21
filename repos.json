@@ -541,7 +541,32 @@
         "x86.exe": "WINDOWS x32",
         "x86.zip": "WINDOWS x32 P"
       }
+    },
+    {
+      "owner": "zen-browser",
+      "repo": "desktop",
+      "display_name": "Zen Browser",
+      "icon": "https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/docs/assets/zen-dark.svg",
+      "os_overrides": {
+        "aarch64.AppImage": "LINUX ARM64",
+        "x86_64.AppImage": "LINUX",
+        "universal.dmg": "MACOS UNIVERSAL",
+        "installer.exe": "WINDOWS",
+        "installer-arm64.exe": "WINDOWS ARM64"
+      }
+    },
+    {
+      "owner": "NickvisionApps",
+      "repo": "Parabolic",
+      "icon": "https://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.png",
+      "os_overrides": {
+        "aarch64.flatpak": "LINUX ARM64",
+        "x64.flatpak": "LINUX",
+        ".exe": "WINDOWS",
+        ".zip": "WINDOWS P"
+      }
     }
   ]
 } 
+
 

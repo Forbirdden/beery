@@ -243,7 +243,7 @@ function createAppCard(app) {
         return assets
             .map(asset => {
                 const ext = asset.name.split('.').pop().toLowerCase();
-                if (['blockmap', 'yml', 'sha', 'sig', 'asc', 'txt', 'zsync', 'sym'].includes(ext)) return null;
+                if (['blockmap', 'yml', 'sha', 'sig', 'asc', 'txt', 'zsync', 'sym', 'xml'].includes(ext)) return null;
 
                 let os = Object.entries(osOverrides).find(([key]) => 
                     asset.name.toLowerCase().includes(key.toLowerCase())
@@ -380,3 +380,4 @@ function createAppCard(app) {
 
     init();
 });
+

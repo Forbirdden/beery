@@ -463,7 +463,7 @@
         "armv7l.AppImage": "LINUX ARM",
         "armv7l.freebsd": "FREEBSD ARM",
         "armv7l.tar.gz": "LINUX ARM",
-        "ia32.nsis.7z": "WINDOWS P",
+        "ia32.nsis.7z": "WINDOWS x32 P",
         "x64.nsis.7z": "WINDOWS P",
         "x86_64.flatpak": "LINUX",
         "aarch64.rpm": "LINUX ARM64",
@@ -547,15 +547,24 @@
         ".dmg": "MACOS",
         "linux.zip": "LINUX"
       }
+    },
+    {
+      "owner": "stakira",
+      "repo": "OpenUtau",
+      "display_name": "OpenUTAU",
+      "icon": "https://www.openutau.com/assets/images/openutau.png",
+      "os_overrides": {
+        "linux-arm64": "LINUX ARM64",
+        "linux-x64": "LINUX",
+        "arm64.dmg": "MACOS ARM64",
+        "x64.dmg": "MACOS",
+        "x64.exe": "WINDOWS",
+        "x64.zip": "WINDOWS P",
+        "arm64.exe": "WINDOWS ARM64",
+        "arm64.zip": "WINDOWS ARM64 P",
+        "x86.exe": "WINDOWS x32",
+        "x86.zip": "WINDOWS x32 P"
+      }
     }
   ]
 } 
-
-
-
-
-
-
-
-
-

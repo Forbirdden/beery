@@ -558,7 +558,7 @@
     {
       "owner": "NickvisionApps",
       "repo": "Parabolic",
-      "icon": "https://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.pnghttps://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.png",
+      "icon": "https://dl.flathub.org/media/org/nickvision/tubeconverter/c0285d0f30818519a2ec5c8aa6331ab4/icons/128x128/org.nickvision.tubeconverter.png",
       "os_overrides": {
         "aarch64.flatpak": "LINUX ARM64",
         "x64.flatpak": "LINUX",
@@ -568,5 +568,6 @@
     }
   ]
 } 
+
 
 

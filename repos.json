@@ -565,9 +565,19 @@
         ".exe": "WINDOWS",
         ".zip": "WINDOWS P"
       }
+    },
+    {
+      "owner": "kostya-zero",
+      "repo": "AnomalyLauncher",
+      "icon": "https://raw.githubusercontent.com/kostya-zero/AnomalyLauncher/refs/heads/main/assets/icon.png",
+      "os_overrides": {
+        ".exe": "WINDOWS",
+        ".zip": "WINDOWS P"
+      }
     }
   ]
 } 
+
 
 
 

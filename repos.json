@@ -201,7 +201,7 @@
     {
       "owner": "ventoy",
       "repo": "Ventoy",
-      "icon": "https://images.opencollective.com/ventoy/dd17838/logo/256.png"
+      "icon": "https://www.ventoy.net/static/img/ventoy.png"
     },
     {
       "owner": "balena-io",
@@ -583,4 +583,5 @@
     }
   ]
 } 
+
 

@@ -580,9 +580,15 @@
       "repo": "min-max-uninstaller",
       "display_name": "Min",
       "icon": "https://raw.githubusercontent.com/Forbirdden/min-max-uninstaller/refs/heads/main/assets/icon.png"
+    },
+    {
+      "owner": "Tylemagne",
+      "repo": "Gopher360",
+      "icon": "https://raw.githubusercontent.com/Tylemagne/Gopher360/refs/heads/master/Windows/Gopher/gopher.ico"
     }
   ]
 } 
+
 
 
 
